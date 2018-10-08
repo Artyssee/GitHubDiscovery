@@ -1,0 +1,14 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css');
+
+// Variables
+@import './variables/colors';
+
+// Mixins
+@import './typography/typography';
+
+// Components
+@import './components/search';
+@import './components/buttons';
+
+// Pages
+@import './pages/mainpage';

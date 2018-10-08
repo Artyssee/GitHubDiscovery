@@ -1,0 +1,111 @@
+
+
+.githubtool {
+	&-body {
+		background-color: $color-page;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&-section {
+		@include fontFamily(Roboto);
+
+		background-color: $color-white;
+		text-align: center;
+
+		&__header {
+			color: $color-black;
+			padding: 1rem 1rem 0 1rem;
+		}
+		&__text {
+			color: $color-black;
+			padding: 1rem;
+		}
+	}
+
+	&-formsection {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+	}
+
+	&-form {
+		margin-top: 2rem;
+		width: 20vw;
+		padding: 2rem 4rem;
+		border-radius: 3px;
+		background-color: $color-white;
+
+		&__input {
+			padding: 1em;
+		}
+
+		&__status-orb {
+			display: inline-flex;
+			border-radius: 5px;
+			margin-left: 20px;
+			width: 10px;
+			height: 10px;
+			background-color: $color-black;
+		}
+	}
+}
+
+.githubuser {
+	&-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: $color-white;
+		width: 20vw;
+		padding: 2rem 4rem;
+		margin-top: 2rem;
+		min-height: 200px;
+		border-radius: 3px;
+
+		&__label {
+			font-weight: bold;
+		}
+	}
+
+	&-image-container {
+		display: flex;
+		flex-direction: row;
+
+		&__image {
+			max-width: 80px;
+			max-height: 80px;
+			border-radius: 5px;
+
+		}
+	}
+
+	&-group {
+		grid-area: githubuser-group;
+
+		&__image {
+			border-radius: 50rem;
+			width: 200px;
+			height: 200px;
+		}
+	}
+}
+
+.grid-container {
+	align-self: center;
+	height: 100%;
+  }
+  
+  .one { grid-area: one;
+background-color: green;
+ }
+  
+  .two { grid-area: two; }
+
+  .three {
+	  grid-area: three;
+	  background-color: red;
+  }
+  
