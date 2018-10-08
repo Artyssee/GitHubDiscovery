@@ -7,11 +7,9 @@ window.onload = function() {
 let gitHubForm = $('#gitForm');
 let gitHubFormSearch = $('#gitFormSub');
 let gitHubUserContainer = $('.githubuser-container');
-let satusOrb = $('.githubtool-form__status-orb')
+let satusOrb = $('.githubtool-form__status-orb'); // Later to give status of request
 
 $(document).ready(function(e){
-	let createContent = 'No user found';
-	gitHubUserContainer.append(createContent);
 	gitHubForm.on('submit', function() {
 		let createContent = '';
 		gitHubUserContainer.append(createContent);
@@ -22,13 +20,14 @@ $(document).ready(function(e){
 });
 
 function getUserInfo(gitHubUser) {
-
+	let createContent = '';
 
 	$.get(`https://api.github.com/users/${gitHubUser}`, function( data ) {
 		return data;
 	})
 	.done(function( data ) {
 		console.log(data);
+		gitHubUserContainer.empty(createContent);
 		createContent = `
 	<div class="githubuser-group">
 		<img class="githubuser-group__image" src="${data.avatar_url}" alt="" srcset="">
@@ -72,11 +71,7 @@ function getUserInfo(gitHubUser) {
 	})
 
 	.fail(function() {
-		alert('no');
+		alert('User has not been found');
 	})
-
-	.always(function() {
-		alert('finishhed');
-	});
 }
 }
